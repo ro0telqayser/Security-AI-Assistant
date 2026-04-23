@@ -10,7 +10,7 @@
 Security AI Assistant is a unified **SAST + DAST** vulnerability scanning pipeline built as part of my third-year project at LJMU. The tool combines two complementary security testing approaches:
 
 - **SAST (Static Application Security Testing)** — scans source code without executing it, using [Semgrep](https://semgrep.dev/) to detect insecure coding patterns (e.g., injection flaws, hardcoded credentials, insecure use of crypto).
-- **DAST (Dynamic Application Security Testing)** — actively probes a running application for vulnerabilities, using [HexStrike](https://github.com/hexstrike) as the backend toolchain (Nuclei, SQLMap, Nikto, etc.).
+- **DAST (Dynamic Application Security Testing)** — actively probes a running application for vulnerabilities, using [HexStrike AI]((https://github.com/0x4m4/hexstrike-ai)) as the backend toolchain (Nuclei, SQLMap, Nikto, etc.).
 
 Results from both scanners are normalised into a common finding format, deduplicated, stored in a local SQLite database, and optionally explained by a locally-running LLM (DeepSeek via Ollama).
 
@@ -308,7 +308,7 @@ This project demonstrates understanding of the following security topics:
 ## Acknowledgements
 
 - [Semgrep](https://semgrep.dev/) – fast, open‑source static analysis engine
-- [HexStrike](https://github.com/hexstrike) – REST API wrapper for DAST tools (Nuclei, SQLMap, Nikto, etc.)
+- [HexStrike AI]((https://github.com/0x4m4/hexstrike-ai)) – REST API wrapper for DAST tools (Nuclei, SQLMap, Nikto, etc.)
 - [Ollama](https://ollama.ai/) – local LLM runtime for DeepSeek explanations
 - All other open‑source libraries listed in `requirements.txt`
 ---
