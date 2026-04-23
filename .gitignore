@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.dockerignore
+
+# Frontend
+node_modules/
+dist/
+.nuxt/
+.cache/
+coverage/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+

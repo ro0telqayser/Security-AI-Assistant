@@ -1,0 +1,27 @@
+rules:
+  - id: js-localstorage-token
+    message: "Avoid storing tokens in localStorage; prefer HttpOnly/Secure cookies."
+    severity: WARNING
+    languages: [javascript, typescript]
+    patterns:
+      - pattern-either:
+          - pattern: localStorage.setItem($KEY, $VAL)
+          - pattern: localStorage.getItem($KEY)
+      - metavariable-regex:
+          metavariable: $KEY
+          regex: "(?i)(token|jwt|access|refresh|auth)"
+
+  - id: js-jwt-secret-hardcoded
+    message: "Avoid hardcoded JWT secrets or fallback literals."
+    severity: ERROR
+    languages: [javascript, typescript]
+    pattern: process.env.JWT_SECRET || $SECRET
+
+  - id: js-jwt-sign-no-expiry
+    message: "JWT signing without expiresIn; tokens should be short‑lived."
+    severity: WARNING
+    languages: [javascript, typescript]
+    patterns:
+      - pattern: jwt.sign($PAYLOAD, $SECRET, $OPTS)
+      - pattern-not: jwt.sign($PAYLOAD, $SECRET, { ..., expiresIn: $EXP, ... })
+
