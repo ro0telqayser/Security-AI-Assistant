@@ -305,6 +305,13 @@ This project demonstrates understanding of the following security topics:
 - **Rate limiting** detection
 
 ---
+## Acknowledgements
+
+- [Semgrep](https://semgrep.dev/) – fast, open‑source static analysis engine
+- [HexStrike](https://github.com/hexstrike) – REST API wrapper for DAST tools (Nuclei, SQLMap, Nikto, etc.)
+- [Ollama](https://ollama.ai/) – local LLM runtime for DeepSeek explanations
+- All other open‑source libraries listed in `requirements.txt`
+---
 
 ## Author
 
